@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sixth Prototype</title>
+
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css">
+	<link rel="stylesheet" type="text/css" href="css/myEssentials.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body class="nomargin">
+
+<div class="container">
+
+	<div class="left-col">
+
+			<a id="link9" class="leftHandLink displayFont" href="#" onclick="showAll()" style="color:red;">SOUTH</a><br>
+			<a id="link1" class="leftHandLink displayFont" href="#" onclick="hideNonMine()">BLANK</a><br>
+			<a id="link2" class="leftHandLink displayFont" href="#" onclick="hideNonUnplanned()">UNPLANNED</a><br>
+			<a id="link4" class="leftHandLink displayFont" href="#" onclick="hideNonDream()">UNBUILT</a><br>
+			<a id="link5" class="leftHandLink displayFont" href="#" onclick="hideNonUnbuilt()">UNJOBURG</a><br>
+			<a id="link6" class="leftHandLink displayFont" href="#" onclick="hideNonLawn()">LAND/SCAPE</a><br>
+			<a id="link7" class="leftHandLink displayFont" href="#" onclick="hideNonForjaz()">DREAM MAP</a><br>
+			<a id="link8" class="leftHandLink displayFont" href="#" onclick="hideNonFonts()">JOZIQUEST</a> 
+
+			<div id="map"></div>
+
+	</div>
+
+	<div class="center-col" style="placeratdding-top: 3%;">
+
+	<div class="row1">
+		<div class="imageColumn1">
+			
+			<img id="myImg" class="resize unbuilt"  src="assets/images/Typography/DSC_2044.JPG" onclick="displayImg(src)">
+			<img id="myImg" class="resize unbuilt"  src="assets/images/Typography/DSC_2045.JPG" onclick="displayImg(src)">
+			<img id="myImg" class="resize unbuilt"  src="assets/images/Noeleen/17.png" onclick="displayImg(src)">
+
+		<!-- 	<div class="forjaz"><p class="displayFontMatrix" style="font-size: 15px; line-height: 12px; margin-bottom: 5px;">NM Do you think that in the Rand Mines Project  in light of the correspondence with Team 10, the Smithsons, the global dialogue, experimentation with building methods  there was a seed of hope in that project coming together? In a way, because it was never built it remains a mythical potential in certain quarters; that there was a kind of possibility then for South African architecture. A question about the politics of this project: it's at the height of apartheid, it Rand Mines Properties trying to make profit out if its ‘mined out’ landscape, and we know that Roelof and Ivor were leftist architects but the kind of constraints into which they worked was never articulated, certainly not in these reports ...</p>
+
+			<p class="displayFontMatrix" style="font-size: 15px; line-height: 12px; margin-top: 0; color: red;">JF No, it was not a project that could question the system. It was accepting that good planning,  and good architecture, even   especially good urban design could be made for a certain class of citizens. That was not put under discussion. Eventually if you admit intellectually that that class of citizens can be substituted by a black class or a mixed class and so on, it didn't lose it validity and I think that people were not naive but they were not extremists in the sense that if you don't work for this society then, well, bugger off, go to another place. They were quite realistic. I think they tired and did a very good job, much better than what the new masters are doing.</p> 
+		</div -->
+		</div>
+
+		<div class="imageColumn1">
+			<img id="myImg" class="resize mine"  src="assets/images/Noeleen/1.png" onclick="displayImg(src)">
+			<img id="myImg" class="resize mine"  src="assets/images/Noeleen/2.png" onclick="displayImg(src)">
+			<img id="myImg" class="resize mine" src="assets/images/Noeleen/3.png" onclick="displayImg(src)">
+		</div>
+
+		<div class="imageColumn1">
+			<img id="myImg" class="resize mine"  src="assets/images/Noeleen/4.png" onclick="displayImg(src)">
+			<img id="myImg" class="resize mine"  src="assets/images/Noeleen/5.png" onclick="displayImg(src)">
+			<img id="myImg" class="resize mine" src="assets/images/Noeleen/6.png" onclick="displayImg(src)">
+		</div>
+
+		<div class="imageColumn1">
+			<img id="myImg" class="resize mine"  src="assets/images/Noeleen/7.png" onclick="displayImg(src)">
+			<img id="myImg" class="resize mine"  src="assets/images/Noeleen/8.png" onclick="displayImg(src)">
+			<img id="myImg" class="resize mine" src="assets/images/Noeleen/9.png" onclick="displayImg(src)">
+		</div>
+
+		<div class="imageColumn1">
+			<img id="myImg" class="resize mine"  src="assets/images/Noeleen/10.png" onclick="displayImg(src)">
+			<img id="myImg" class="resize mine"  src="assets/images/Noeleen/11.png" onclick="displayImg(src)">
+			<img id="myImg" class="resize mine" src="assets/images/Noeleen/12.png" onclick="displayImg(src)">
+		</div>
+
+		<div class="imageColumn1">
+			<img id="myImg" class="resize mine"  src="assets/images/Noeleen/13.png" onclick="displayImg(src)">
+			<img id="myImg" class="resize mine"  src="assets/images/Noeleen/14.png" onclick="displayImg(src)">
+			<img id="myImg" class="resize mine" src="assets/images/Noeleen/15.png" onclick="displayImg(src)">
+		</div>
+
+		<div id="testy" class="imageColumn1">
+			<img id="myImg" class="resize mine"  src="assets/images/Noeleen/16.png" onclick="displayImg(src)">
+			<img id="myImg" class="resize forjaz"  src="assets/images/forjaz/DSC_19222.JPG" onclick="displayImg(src)">
+			<img id="myImg" class="resize forjaz" src="assets/images/forjaz/DSC_2020.JPG" onclick="displayImg(src)">
+		</div>
+
+		<div class="imageColumn1">
+			<img id="myImg" class="resize font saty"  src="assets/images/Jill/1SATYAGRAHA_HOUSE/SATYAGRAHA_FINAL/SATYAGRAHA1.jpg" onclick="displayImg(src)">
+			<img id="myImg" class="resize font saty"  src="assets/images/Jill/1SATYAGRAHA_HOUSE/SATYAGRAHA_FINAL/SATYAGRAHA2.jpg" onclick="displayImg(src)">
+			<img id="myImg" class="resize font mountain"  src="assets/images/Jill/2MOUNTAIN_VIEW/MOUNTAIN_FINAL/MOUNTAIN1.jpg" onclick="displayImg(src)">
+		</div>
+
+		<div class="imageColumn1">
+			<img id="myImg" class="resize font mountain"  src="assets/images/Jill/2MOUNTAIN_VIEW/MOUNTAIN_FINAL/MOUNTAIN2.jpg" onclick="displayImg(src)">
+			<img id="myImg" class="resize font tolstoy"  src="assets/images/Jill/3TOLSTOY_FARM/TOLSTOY_FINAL/TOLSTOY1.jpg" onclick="displayImg(src)">
+			<img id="myImg" class="resize font tolstoy"  src="assets/images/Jill/3TOLSTOY_FARM/TOLSTOY_FINAL/TOLSTOY2.jpg" onclick="displayImg(src)">
+		</div>
+
+		<div class="imageColumn1">
+			<img id="myImg" class="resize font berg"  src="assets/images/Jill/4OP_DIE_BERG/BERG_FINAL/BERG1.jpg" onclick="displayImg(src)">
+			<img id="myImg" class="resize font berg"  src="assets/images/Jill/4OP_DIE_BERG/BERG_FINAL/BERG2.jpg" onclick="displayImg(src)">
+			<img id="myImg" class="resize font berg"  src="assets/images/Jill/4OP_DIE_BERG/BERG_FINAL/BERG3.jpg" onclick="displayImg(src)">
+		</div>
+
+		<div class="imageColumn1">
+			<img id="myImg" class="resize font constantine"  src="assets/images/Jill/5CONSTANTINE_AND_HELEN/CONSTANTINE_FINAL/CONSTANTINE1.jpg" onclick="displayImg(src)">
+			<img id="myImg" class="resize font constantine"  src="assets/images/Jill/5CONSTANTINE_AND_HELEN/CONSTANTINE_FINAL/CONSTANTINE2.jpg" onclick="displayImg(src)">
+			<img id="myImg" class="resize font constantine"  src="assets/images/Jill/5CONSTANTINE_AND_HELEN/CONSTANTINE_FINAL/CONSTANTINE3.jpg" onclick="displayImg(src)">
+		</div>
+
+		<div class="imageColumn1">
+			<img id="myImg" class="resize font temple"  src="assets/images/Jill/6TEMPLE_ISRAEL/TEMPLE_FINAL/TEMPLEFINAL1.jpg" onclick="displayImg(src)">
+			<img id="myImg" class="resize font temple"  src="assets/images/Jill/6TEMPLE_ISRAEL/TEMPLE_FINAL/TEMPLEFINAL2.jpg" onclick="displayImg(src)">
+			<img id="myImg" class="resize font temple"  src="assets/images/Jill/6TEMPLE_ISRAEL/TEMPLE_FINAL/TEMPLEFINAL3.jpg" onclick="displayImg(src)">
+		</div>
+
+		<div class="imageColumn1">
+			<img id="myImg" class="resize font temple"  src="assets/images/Jill/6TEMPLE_ISRAEL/TEMPLE_FINAL/TEMPLEFINAL4.jpg" onclick="displayImg(src)">
+			<img id="myImg" class="resize font temple"  src="assets/images/Jill/6TEMPLE_ISRAEL/TEMPLE_FINAL/TEMPLEFINAL5.jpg" onclick="displayImg(src)">
+			<img id="myImg" class="resize font arop"  src="assets/images/Jill/7AROP_HOUSE/AropFinal/AROPHOUSE1.jpg" onclick="displayImg(src)">
+		</div>
+
+		<div class="imageColumn1">
+			<img id="myImg" class="resize font arop"  src="assets/images/Jill/7AROP_HOUSE/AropFinal/AROPHOUSE2.jpg" onclick="displayImg(src)">
+			<img id="myImg" class="resize font arop"  src="assets/images/Jill/7AROP_HOUSE/AropFinal/AROPHOUSE3.jpg" onclick="displayImg(src)">
+			<img id="myImg" class="resize font arop"  src="assets/images/Jill/7AROP_HOUSE/AropFinal/AROPHOUSE4.jpg" onclick="displayImg(src)">
+		</div>
+
+		<div class="imageColumn1">
+			<img id="myImg" class="resize font moosa"  src="assets/images/Jill/8MOOSA_HASSEN/MOOSA_FINAL/MOOSAFINAL1.jpg" onclick="displayImg(src)">
+			<img id="myImg" class="resize font moosa"  src="assets/images/Jill/8MOOSA_HASSEN/MOOSA_FINAL/MOOSAFINAL2.jpg" onclick="displayImg(src)">
+			<img id="myImg" class="resize font moosa"  src="assets/images/Jill/8MOOSA_HASSEN/MOOSA_FINAL/MOOSAFINAL3.jpg" onclick="displayImg(src)">
+		</div>
+
+		<div class="imageColumn1">
+			<img id="myImg" class="resize font orlando"  src="assets/images/Jill/9ORLANDO/ORLANDOFINAL1.jpg" onclick="displayImg(src)">
+		</div>
+
+		</div>
+	</div>
+
+	<div id="rightSide" class="right-col" style="" >
+
+		<img id="logoSouth" style="padding-top: 15%;" class="margin-left-50" src="assets/images/Logo.png"><p class="displayFont margin-50 nomargin-bottom" style="font-size: 15px;">IDEA</p><p class="margin-50 nomargin-bottom displayFontMatrix margin-top-10" style="font-size: 15px; line-height: 14px;">SOUTH, the first in a series of 4 creative works around co-ordinated themes of imagined and real space in Johannesburg, South Africa, with contributions from artists, architects and authors. The series is envisaged as a way to think about the many Joburgs/Jozi’s/Egoli’s we inhabit. Crossing the city, the four works SOUTH, EAST, WEST and NORTH, will consider the productive spaces coalesced around a series of themes arising out of the core project out of which this series has emerged, the Rand Mines Properties Project from the 1970s. Constructed around a ‘Dream Map’, the project envisaged a radical modernist scheme for the redevelopment of ‘out mined’ land to the geographical South of the city. Concerned with filling what was treated as an empty space or ‘blank’ on the landscape, the interdisciplinary team of architects, photographers, landscape architects and planners imagined a future curiously shaped around ideas of newness in a space they called ‘The New South’. This imaginary vision was against the ideas of the time of apartheid’s buffer zones of segregation, mining, township (Soweto – the South Western township), and the white city of progress and modernity. <br/><br/></p><p class="displayFont margin-50 nomargin-bottom margin-top-10" style="font-size: 15px;">SOUTH</p><p class="margin-50 nomargin-bottom displayFontMatrix margin-top-10" style="font-size: 15px; line-height: 14px;">In thinking with / through / alongside/ against / and anew (sic), the creative research proposed for the SOUTH project seeks imaginative responses to the making and unmaking of the idea of City of Gold, across a range of possible genres – from photography to fiction, print making to mark making in the landscape, rethinking pasts and futures. If as is so often the case scientific and professional knowledges shape the intellectual landscape of Urban Studies in South Africa, this project hopes to privilege the creative, the imaginative, the unreal and locate performative aspects of the ‘urban humanities’ around the following themes: blank, unplanned, unbuilt, unJoburg (after China Miéville’s fictional ‘unLun Dun’), land/scape, Dream Map and JoziQuest. <br/><br/></p><p class="displayFont margin-50 nomargin-bottom margin-top-10" style="font-size: 15px;">METHODS AND SOURCES</p><p class="margin-50 nomargin-bottom displayFontMatrix margin-top-10" style="font-size: 15px; line-height: 14px;">The co-ordinate map above draws reference to the blank_Architecture, apartheid and after project’s ‘grid’ of thematic concepts that were used to develop a non-linear, non-temporal, non-biographic (great men, great works, great lives) and a-political ways in which histories of architecture, planning, urban design and landscape architecture are traditionally formulated. Our co-ordinate mapping is a loose set of relational positions adduced to thinking about the ways in which the city has come to have distinct co-ordinate identities – according value around social status, race, class and political ecologies of the city and its ‘world below’. <br/><br/>SOUTH is a project that also draws on Walter Benjamin’s ideas from The Arcades Project of the ‘convolute’ – envelopes of collected archival associations and fragments of life in the city of Paris. Similarly, the digital archive of the SOUTH uses this method to assemble its sources, reflections, documents and notes. <br/><br/></p><p class="margin-50 displayFontMatrix margin-top-10" style="font-size: 15px; font-weight: 800; line-height: 14px;">SOUTH is a curated project by Jonathan Cane, Noëleen Murray and Dorothee Kreutzfeldt.</p>
+
+			<!-- <p class="displayFont margin-50 nomargin-bottom" style="font-size: 15px; padding-top: 5%;">JOZIQUEST</p>
+
+			<p class="margin-80 nomargin-bottom displayFontMatrix margin-top-10" style="font-size: 15px; line-height: 14px;">
+
+				… ‘holistic research’ to be addressed to the ‘daunting policy challenges’ facing administrators in the
+				face of seemingly ‘incomensurable’ challenges facing contemporary cities …
+			 <br/><br/></p>
+
+			<p class="margin-50 nomargin-bottom displayFontMatrix margin-top-10" style="font-size: 15px; line-height: 14px;">Johannesburg, city of hybrid modernities, arguably the ‘African capital of the twenty-first century’…
+			  after Walter Benjamin’s ‘Paris, the capital of the Nineteenth Century’.
+			<br/><br/></p>
+
+			<p class="margin-50 nomargin-bottom displayFontMatrix margin-top-10" style="font-size: 15px; line-height: 14px;">This excavation of Johannesburg is inspired by Das Passagen-Werk, Walter Benjamin’s unfinished reflection on modernity and history, in the spirit of facilitating creative cross-disciplinary understandings of space and urbanisms in relation to heritage, architecture and public history, associated with cities and the urban present.
+			 <br/><br/></p>
+
+ 			<p class="margin-50 nomargin-bottom displayFontMatrix margin-top-10" style="font-size: 15px; line-height: 14px;">JOZIQUEST, the name I have given to a project aimed at <b>creatively and expressively</b> unwrapping and revealing the complex and layered <b>nature of space  </b>in <b>urban Johannesburg</b>. This is a pilot project, situated within the <b>emerging disciplinary space</b> offered by the Digital Humanities, in which the goal is to establish an online website that will be aimed at <b>practitioners working in the formal spatial and planning contexts</b>, as well as <b>scholars across the humanities</b>.<br/><br/></p>
+
+ 			<p class="margin-50 nomargin-bottom displayFontMatrix margin-top-10" style="font-size: 15px; line-height: 14px;">In this first phase of the project, I invite you to explore <b>nine sites</b> associated with the architect <b>Hermann Kallenbach</b>, each offered as means of <b>approaching spatial complexity</b> in Johannesburg.</b>.<br/><br/></p>
+
+ 			<p class="margin-50 nomargin-bottom displayFontMatrix margin-top-10" style="font-size: 15px; line-height: 14px;">As has been well established in scholarship in the spatial humanities (Edensor and Jayne 2011; Murray 2008, 2011; Nuttall and Mbembe 2008; Simone 2008, 2011), <b>cities are complex and dynamic</b> organisms that demand <b>multi-layered research methods and innovative data gathering techniques</b> to cross disciplinary boundaries in order to yield knowledge that can be effective in urban planning and redevelopment. The urban fabric of the city of Johannesburg, if viewed through a range of disciplinary lenses from <b>historical, to artistic, to ethnographic</b>, can provide salient data as to the social, spatial, cultural, and psychological impacts of change pre- and post-dating the political transformation of 1994, data that has bearing on urban planning in the present and future. Following Benjamin’s Arcades Project, the primary goal of this project is to <b>assemble a knowledge bank of cultural, historical, and humanistic material</b>, which is aimed at thickening scientific data produced through formal urban research, and that can activate cultural memory and spatial history as part of renewal and planning projects.</b>.<br/><br/></p>
+
+ 			<p class="margin-80 nomargin-bottom displayFontMatrix margin-top-10" style="font-size: 15px; line-height: 14px;"><i>A world of secret affinities opens up within: palm tree and feather duster, hairdryer and Venus de Milo, prostheses and letter-writing manuals. The odalisque lies in wait next to the
+			inkwell, and priestesses raise high the vessels into which we drop cigarette butts
+			as incense offerings. [Walter Benjamin 1999. From Convolute R ‘MIRRORS’, 540 of the Belknap edition of The Arcades Project. Transl Eiland &amp; Mclaughlin.]
+
+			A world of secret affinities: palm tree and feather duster, hair dryer and Venus de Milo, prosthesis and letter-writing manual come together here as after a long separation. [Walter Benjamin 1999. ‘The Arcades of Paris’, 874 of the Belknap edition of The Arcades Project. Transl Eiland &amp; Mclaughlin.</i><br/><br/></p>
+
+			<p class="margin-50 nomargin-bottom displayFontMatrix margin-top-10" style="font-size: 15px; line-height: 14px;">From a series of untitled texts on loose sheets of paper, dated to 1928 9r 1929, most likely the beginnings of the essay Paris Arcades: A Dialectical Fairyland, originally planned by Benjamin, now rearranged by translators Howard Eiland and Keneth McLaughlin for the Belknap edition of 1999, in whose arrangement the first of the articles opens with an excerpt Benjamin culled from the Illustrated Guide to Paris:</b>.<br/><br/></p>
+
+			<p class="margin-80 nomargin-bottom displayFontMatrix margin-top-10" style="font-size: 15px; line-height: 14px;"><i>"In speaking of the inner boulevards;' says the Illustrated Guide to Paris, a complete
+			picture of the city on the Seine and its environs from the year 1852, "we
+			have made mention again and again of the arcades which open onto them. These
+			arcades, a recent invention of industrial luxury, are glass-roofed, marble-panelled
+			corridors extending through whole blocks of buildings, whose owners have
+			joined together for such enterprises. Lining both sides of these corridors, which
+			get their light from above, are the most elegant shops, so that the arcade is a city,
+			a world in miniature, in which customers will find everything they need.”</i><br/><br/></p>
+
+			<p class="margin-50 nomargin-bottom displayFontMatrix margin-top-10" style="font-size: 15px; line-height: 14px;">See full LiC JOZIQUEST proposal at: </br>https://www.academia.edu/37091964/LIFE_IN_THE_CITY_Wits_School_of_Governance </br></br>
+			See also https://secretaffinitiesblog.wordpress.com/<br/><br/></br></p>
+
+			<hr style="width: 380px;"> <br/>
+
+			<p class="margin-50 displayFontMatrix margin-top-10" style="font-size: 15px; font-weight: 800; line-height: 14px;">Walter Benjamin. 1999. The Arcades Project. Transl. Howard Eiland &amp; Kevin McLaughlin. Cambridge, MA.: The Belknap Press at Harvard University Press. </br>
+			Tim Edensor &amp; Mark Jayne, editors. 2011. Urban Theory Beyond the West. London and New York: Routledge.</br>
+			Martin Murray. 2008. Taming the Disorderly City: The Spatial Landscape of Johannesburg after Apartheid. Ithaca and London: Cornell University Press. </br>
+			Martin Murray. 2011. City of Extremes: The Spatial Politics of Johannesburg. Durham, NC: Duke University Press. </br>
+			Sarah Nuttall &amp; Achille Mbembe. 2008. Johannesburg, The Elusive Metropolis. Johannesburg: Wits University Press. </br>AbdouMaliq Simone. 2008. People as Infrastructure: Intersecting fragments in Johannesburg. In Sarah Nuttall and Achille Mbembe, editors. Johannesburg, The Elusive Metropolis, 68-90. Johannesburg: Wits University Press. </br>
+			AbdouMaliq Simone. 2011. No longer the Subaltern: Refiguring cities in the Global South. In Tim Edensor and Mark Jayne, editors. Urban Theory Beyond the West, 31-46. London and New York: Routledge.</p>
+
+			<p class="margin-50 displayFontMatrix margin-top-10" style="font-size: 15px; font-weight: 800; line-height: 14px;"><b>Acknowledgements:</b></br></br>
+			For their generosity and engagement at many and various points throughout this research journey, I am indebted to: </br>
+			Noëleen Murray</br>
+			Eric Itzkin</br>
+			Melissa Myambo</br>
+			Jonathan Cane &amp; Andrea Hayes</br></br>
+
+			JOZIQUEST is a project by Jill Weintroub, Life in the City Postdoctoral Fellow at the Wits City Institute
+			The Life in the City Programme is located in the School of Governance, University of the Witwatersrand.</br>
+			Images: Jill Weintroub</br>
+			Tracings: Noëleen Murray
+			</p> -->
+
+	</div>
+</div>
+
+<!-- The Modal -->	
+<div id="myModal" class="modal">
+
+    <!-- The Close Button -->
+    <span class="close">&times;</span>
+
+
+  	<img class="modal-content" id="img01">
+
+  	
+
+  	<div class="textInModal">  
+
+  	<h2 id="convoluteHeading" class="modal-content displayFont" style="color: white;">HEADING of convolute</h2> <br/>
+  	<h2 id="imgHeading" class="modal-content displayFont" style="color: white;">HEADING of image</h2> <br/>
+
+  	<h2 class="modal-content displayFontMatrix margin-top-0 margin-bottom-0" style="color: white; position: absolute; left: 130px; top: 100px; font-size: 20px;">
+
+  	<a id="fullSize" class="modalLink" onclick="openInNewTab()">View in Full Size /</a> 
+
+  	<a id="openPDF" class="modalLink" onclick="openInNewTabPDF()">Open PDF</a>
+
+  	</h2>  <br/>
+
+
+  	<p id="aboutImage" class="margin-top-10" style="position: absolute; left: 130px; font-size: 12px; line-height: 13px;">Ut mazim fierent his, eos maiorum lucilius ei. Mel modo ferri equidem no. Mei dicunt postulant neglegentur no, qui populo dictas eu, ad cetero minimum ius. Nam nostrud euismod ne, dolor salutandi definitiones mei ei. In modo labitur numquam vix, odio omnes ocurreret ea per, ius ei vide dissentiet definitionem. Vero ipsum cotidieque vim ea, eu est suas quidam maluisset, wisi legimus suavitate ea qui. Vim no congue graece mediocritatem.</p>
+
+  </div>
+
+  	
+</div>
+
+<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+<script type="text/javascript" src="plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="plugins/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+</body>
+</html>

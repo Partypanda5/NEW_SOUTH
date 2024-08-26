@@ -1,0 +1,504 @@
+body{
+
+    overflow-x: hidden;
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: Matrix Bold;
+    src: url(../assets/MatrixBold.ttf);
+}
+
+@font-face {
+    font-family: Gill Sans Pro;
+    src: url(../assets/GillSansMTProExtraBold.otf);
+}
+
+
+a{
+
+ text-decoration: none;
+
+}
+
+img.resize {
+   width: 100%;
+    max-width: 300px;
+    height: 300px;
+
+}
+
+img.resize1{
+    width: 200%;
+    max-width: 560px;
+    height: auto;
+
+}
+
+
+.floatLeft{
+    float: left;
+}
+
+.floatRight{
+
+    float: right;
+}
+
+
+.displayFont{
+
+	font-family: "Gill Sans Pro";
+	font-size: 35px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bolder;
+	line-height: 35px;
+	letter-spacing: 0px;
+
+}
+
+.displayFontMatrix{
+
+	font-family: "Matrix Bold";
+	font-size: 50px;
+	line-height: 30px;
+}
+
+
+.heading{
+
+	position: absolute;
+	bottom: 0;
+	left: 40px;
+	text-align: left;
+	color: black;
+}
+
+.leftHandSide{
+
+	list-style: none;
+	padding-top: 10%;
+	list-style-type: none;
+}
+
+.leftHandLink{
+
+	color: black;
+	list-style-type: none;
+  position: absolute;
+  margin-left: 2%;
+  z-index: 5;
+}
+
+.leftHandLink:hover{
+
+	color: black;
+	text-decoration: none;
+}
+
+.leftHandLink:active{
+
+	color: black;
+	text-decoration: none;
+}
+
+.leftHandLink:visited{
+	color: black;
+	text-decoration: none;
+
+}
+
+.modalLink:hover{
+
+  color: gray;
+  text-decoration: none;
+}
+
+.modalLink:active{
+
+  color: gray;
+  text-decoration: none;
+}
+
+.modalLink:visited{
+  color: gray ;
+  text-decoration: none;
+
+}
+
+
+.container div {
+    margin-left: 0%;
+    box-sizing: border-box;
+
+}
+
+.left-col{
+    width: 25%;
+    float: left;
+}
+
+.left-col:after{
+
+  content: '';
+  width: 25%;
+  height: 100%;
+  position: absolute;
+  border-right: 2px solid black;
+  top: 0;
+}
+
+.right-col {
+    width: 25%;
+    float: left;
+    height: 1000px;
+    overflow-y: scroll;
+}
+
+.right-col:after{
+
+  content: '';
+  width: 25%;
+  height: 100%;
+  position: absolute;
+  border-left: 2px solid black;
+  top: 0;
+}
+
+.center-col {
+
+    width: 50%;
+    height: 1000px;
+    float: left;
+    overflow-y: scroll;
+
+}
+
+
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+
+.row1 {
+
+  position: relative;
+  left: 1%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+
+.imageColumn1 {
+  flex: 35%;
+  max-width: 33%;
+  padding: 0 4px;
+}   
+
+.imageColumn1 img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+
+.rightText{
+
+    text-align: center;
+    position: relative;
+    left: 0%;
+}
+
+.horizontalLine{
+
+    width: 250px;
+    height: 2px;
+    position: relative;
+    background-color: black;
+    left: 25%;
+}
+
+#link9{
+
+  top: 10px;
+}
+
+#link1{
+
+  top: 78px;
+}
+
+#link2{
+
+  top: 111px;
+
+}
+
+#link4{
+
+  top: 144px;
+
+}
+
+#link5{
+
+  top: 177px;
+
+}
+
+#link6{
+
+  top: 210px;
+
+}
+
+#link7{
+
+  top: 243px;
+
+}
+
+
+#link8{
+
+  top: 276px;
+
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px; 
+}
+
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption { 
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+#img01{
+
+  height: 50%;
+  width: 40%;
+}
+
+.textInModal{
+
+  width: 50%;
+  color: white;
+  position: absolute;
+  left: 25%;
+  top: 60%;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+  .imageColumn1 {
+    flex: 100%;
+    max-width: 100%;
+  }
+}   
+
+
+
+@media screen and (max-width: 1500px) {
+    .displayFont{
+
+    	font-size: 25px;
+    	line-height: 20px;
+
+    }
+
+    .displayFontMatrix{
+    	font-size: 30px;
+    	line-height: 20px;
+
+    }
+
+
+    .row1 {
+
+          position: relative;
+          left: 0.5%;
+        }
+
+    #link9{
+
+        top: 10px;
+        }
+
+
+      #link1{
+
+        top: 30px;
+      }
+
+      #link2{
+
+        top: 50px;
+
+      }
+
+      #link3{
+
+        top: 70px;
+
+      }
+
+      #link4{
+
+        top: 70px;
+
+      }
+
+      #link5{
+
+        top: 92px;
+
+      }
+
+      #link6{
+
+        top: 113px;
+
+      }
+
+      #link7{
+
+        top: 134px;
+
+      }
+
+
+      #link8{
+
+        top: 154px;
+
+      }
+
+      .horizontalLine{
+
+          left: 15%;
+
+      }
+
+      .center-col {
+
+        width: 50%;
+        height: 700px;
+        float: left;
+        overflow-y: scroll;
+
+      }
+
+      .right-col {
+        width: 25%;
+        float: left;
+        height: 700px;
+        overflow-y: scroll;
+      }
+
+      }
+
+@media screen and (max-width: 1000px) {
+    .displayFont{
+
+    	font-size: 15px;
+    	line-height: 12px;
+
+    }
+
+      .displayFontMatrix{
+    	font-size: 15px;
+    	line-height: 12px;
+
+    }
+  }
+
+
+@media screen and (max-width: 800px) {
+    .displayFont{
+
+    	font-size: 10px;
+    	line-height: 10px;
+
+    }
+
+    .displayFontMatrix{
+    	font-size: 10px;
+    	line-height: 8px;
+
+    }
+}
+
+sup
+{
+  padding:0px;
+  margin: 0;
+  line-height: 0;
+}
+
+#map{
+
+  height: 250px;
+  width: 250px;
+  position: absolute;
+  top: 330px;
+  left: 40px;
+  z-index: 5;
+  visibility: hidden;
+}
